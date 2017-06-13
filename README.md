@@ -186,6 +186,11 @@ sudo apt-get install ros-kinetic-controller-manager ros-kinetic-ros-control ros-
 sudo apt-get install libnlopt-dev freeglut3-dev qtbase5-dev libqt5opengl5-dev libssh2-1-dev libarmadillo-dev libpcap-dev gksu libgl1-mesa-dev libglew-dev python-wxgtk3.0
 ```
 
+### protobuf
+```
+sudo apt-get install protobuf*
+```
+
 ### velodyne pointcloud
 ```
 cd 
