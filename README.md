@@ -184,5 +184,15 @@ sudo apt install python-rosintall
 sudo apt-get install ros-kinetic-desktop-full ros-kinetic-nmea-msgs ros-kinetic-nmea-navsat-driver ros-kinetic-sound-play ros-kinetic-jsk-visualization ros-kinetic-grid-map ros-kinetic-gps-common
 sudo apt-get install ros-kinetic-controller-manager ros-kinetic-ros-control ros-kinetic-ros-controllers ros-kinetic-gazebo-ros-control ros-kinetic-joystick-drivers
 sudo apt-get install libnlopt-dev freeglut3-dev qtbase5-dev libqt5opengl5-dev libssh2-1-dev libarmadillo-dev libpcap-dev gksu libgl1-mesa-dev libglew-dev python-wxgtk3.0
+```
 
+### velodyne pointcloud
+```
+cd 
+git clone https://github.com/ros-drivers/velodyne.git
+cd velodyne
+mkdir src
+cp -r velodyne* ./src
+catkin_make -j8
+source ./devel/setup.bash
 ```
