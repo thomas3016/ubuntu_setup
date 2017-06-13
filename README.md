@@ -35,7 +35,6 @@ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn
 
 # sudo apt-get install nvidia-367 or sudo apt-get install nvidia-361
-
 nvcc -V
 nvidia-smi
 ```
@@ -164,4 +163,16 @@ http://www.pyimagesearch.com/2015/07/20/install-opencv-3-0-and-python-3-4-on-ubu
 cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/home/katou01/.virtualenvs/py3/local  -D INSTALL_PYTHON_EXAMPLES=OFF -D PYTHON_EXECUTABLE=$(which python3) -D BUILD_opencv_python3=ON -D BUILD_opencv_python2=ON BUILD_EXAMPLES=OFF -D WITH_FFMPEG=OFF -D  BUILD_opencv_java=OFF WITH_CUDA=ON  ..
 
 cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/home/katou01/.virtualenvs/py3/local  -DPYTHON_INCLUDE_DIRS=/home/katou01/.virtualenvs/py3/include/python3.4m -DPYTHON3_LIBRARY=/home/katou01/.virtualenvs/py3/lib/python3.4/config-3.4m-x86_64-linux-gnu/libpython3.4m.so -D PYTHON3_NUMPY_INCLUDE_DIRS=/home/katou01/.virtualenvs/py3/lib/python3.4/site-packages/numpy/core/include -DPYTHON3_PACKAGES_PATH=/home/katou01/.virtualenvs/py3/lib/python3.4/site-packages ..
+```
+
+### ubuntu16
+```
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+sudo apt update
+sudo apt install ros-kinetic-desktop-full
+sudo rosdep init
+rosdep update
+echo "source /opt/ros/kinetic/setup.bash" >> .bashrc
+soruce .bashrc
 ```
